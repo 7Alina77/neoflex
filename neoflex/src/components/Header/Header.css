@@ -1,0 +1,24 @@
+.header {
+  max-width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__main {
+  margin: 15px 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #101010;
+}
+
+.header__item {
+  width: 24px;
+  height: 24px;
+}
+
+.header__item:first-of-type {
+  margin: 0 40px;
+}
