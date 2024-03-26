@@ -1,8 +1,19 @@
+html,
+body {
+  height: 100%;
+}
+
 .link {
+  list-style: none;
+  cursor: pointer;
   text-decoration: none;
   transition: .5s;
 }
 
 .link:hover {
   opacity: .6;
+}
+
+.App {
+  background: #eaeaea;
 }

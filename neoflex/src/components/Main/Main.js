@@ -1,11 +1,12 @@
-import Header from '../Header/Header';
+import Cards from '../Cards/Cards';
 import './Main.css';
 
 function Main() {
   return (
-    <section className='main'>
-      <Header />
-    </section>
+    <main className='main'>
+      <Cards title={"Наушники"}/>
+      <Cards title={"Беспроводные наушники"}/>
+    </main>
   )
 }
 

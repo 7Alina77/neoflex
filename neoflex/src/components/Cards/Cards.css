@@ -1,0 +1,10 @@
+.cards {
+  font-family: "Montserrat", sans-serif;;
+}
+
+.cards__title {
+  margin: 0 0 20px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #838383;
+}
