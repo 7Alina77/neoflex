@@ -1,0 +1,98 @@
+.basket-card {
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 30px;
+  width: 633px;
+  height: 218px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 30px;
+}
+
+.basket-card__left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.basket-card__image-wrapper {
+  margin: 0 auto;
+  width: 146px;
+  height: 136px;
+}
+
+.basket-card__image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.basket-card__counter {
+  display: flex;
+  margin: 25px auto 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.basket-card__minus, .basket-card__plus {
+  font-size: 26px;
+  border: none;
+  background-color: #ffce7f;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
+
+.basket-card__counter-count {
+  font-weight: 600;
+  font-size: 17px;
+  color: #000;
+  padding: 0 25px;
+}
+
+.basket-card__center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.basket-card__title {
+  margin: 0 0 12px;
+  font-weight: 500;
+  font-size: 17px;
+  color: #1c1c27;
+}
+
+.basket-card__price {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  color: #aaa;
+}
+
+.basket-card__right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.basket-card__delete-btn {
+  background-image: url(../../images/delete.svg);
+  width: 20px;
+  height: 18px;
+  background-color: transparent;
+  border: none;
+}
+
+.basket-card__total-price {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: right;
+  color: #1c1c27;
+}

@@ -23,3 +23,23 @@
 .header__item:first-of-type {
   margin: 0 40px;
 }
+
+.header__cart {
+  position: relative;
+}
+
+.header__count {
+  margin: 0;
+  position: absolute;
+  top: 5px;
+  right: 190px;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  background-color: #ffa542;
+  border-radius: 100%;
+  height: 16px;
+  width: 16px;
+  padding: 3px;
+}

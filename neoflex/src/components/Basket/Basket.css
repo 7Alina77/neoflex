@@ -1,0 +1,17 @@
+.basket {
+  min-height: calc(100vh - 205px);
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.basket__title {
+  margin: 30px 0 13px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #1c1c27;
+}
+
+.basket__cards {
+  display: flex;
+  flex-direction: column;
+}

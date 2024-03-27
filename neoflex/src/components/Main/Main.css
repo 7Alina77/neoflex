@@ -1,6 +1,6 @@
 .main {
   background: #eaeaea;
   max-width: 1110px;
-  height: calc(100vh - 205px);
+  min-height: 1200px;
   margin: 28px auto 0;
 }
