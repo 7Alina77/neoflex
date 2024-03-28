@@ -1,15 +1,15 @@
 import './Card.css';
 import rating from '../../images/rating.svg';
-import { useContext } from 'react';
-import basketContext from '../../basketContext/basketContext';
-import { calculateTotal } from '../../utils/functions';
+import { addToBasket } from '../redux/actions/actions';
+import { useDispatch } from 'react-redux';
 
-function Card({card}) {
-  const basketData = useContext(basketContext);
+
+function Card({ card }) {
+  const dispatch = useDispatch();
   
-  const addToBasket = (card) => {
-    basketData.items.push(card);
-  };
+  const handleAddToBasket = (card) => {
+    dispatch(addToBasket(card));
+  }
 
   return (
     <section className='card'>
@@ -35,7 +35,7 @@ function Card({card}) {
             </div> 
             <p className='card__rating'>{card.rate}</p>
           </div>
-          <button className='card__btn link' onClick={() => addToBasket(card)}>Купить</button>
+          <button className='card__btn link' onClick={() => handleAddToBasket(card)}>Купить</button>
         </div>
       </div>
     </section>

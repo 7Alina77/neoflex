@@ -1,0 +1,41 @@
+.basket-total {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  border-radius: 30px;
+  width: 348px;
+  height: 114px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.basket-total__content {
+  margin: 21px 21px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-total__total {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  color: #000;
+}
+
+.basket-total__btn {
+  border-radius: 20px;
+  width: 100%;
+  height: 65px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+  background: #101010;
+  font-weight: 600;
+  font-size: 17px;
+  text-align: center;
+  color: #fff;
+}
+
+.basket-total__sum {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  color: #000;
+}

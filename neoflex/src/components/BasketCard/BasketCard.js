@@ -1,12 +1,12 @@
-import { useContext } from 'react';
+import { useDispatch } from 'react-redux';
 import './BasketCard.css';
-import basketContext from '../../basketContext/basketContext';
+import { removeFromBasket } from '../redux/actions/actions';
 
 function BasketCard({card}) {
-  const basketData = useContext(basketContext);
+  const dispatch = useDispatch();
 
-  function onDelete(card) {
-    basketData.items.filter((item) => item.id !== card.id);
+  const onDelete = (card) => {
+    dispatch(removeFromBasket(card));
   }
 
   return (

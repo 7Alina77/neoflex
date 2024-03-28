@@ -1,19 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from '../redux/store.js';
 import './App.css';
 import Main from '../Main/Main';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Basket from '../Basket/Basket';
-import basketContext from '../../basketContext/basketContext.js';
 
 function App() {
-  const basket = {
-    totalPrice: null,
-    items: [],
-  };
 
   return (
-    <basketContext.Provider value={basket}>
+    <Provider store={store}>
       <div className="App">
         <Header />
         <Routes>
@@ -22,7 +19,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </basketContext.Provider>
+    </Provider>
   );
 }
 
