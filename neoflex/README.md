@@ -13,5 +13,4 @@
 ## Чтобы запустить проект необходимо:
 
 ### npm install
-### npm start
-
+### npm run start
