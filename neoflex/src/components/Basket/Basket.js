@@ -5,8 +5,6 @@ import { connect } from 'react-redux';
 
 function Basket({basket}) {
 
-  console.log(basket);
-  
   return (
     <main className='basket'>
       <h2 className='basket__title'>Корзина</h2>

@@ -47,6 +47,11 @@
   color: #fff;
 }
 
+.basket-card__minus:disabled {
+  background-color: #aaa;
+  pointer-events: none
+}
+
 .basket-card__counter-count {
   font-weight: 600;
   font-size: 17px;

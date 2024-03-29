@@ -1,25 +1,21 @@
-export function calculateTotal(cart) {
-  let total = 0;
-  for (let item of cart) {
-    total += item.price * item.quantity;
+export const saveStateToSessionStorage = (state) => {
+  try {
+    const serializedState = JSON.stringify(state);
+    sessionStorage.setItem('reduxState', serializedState);
+  } catch (error) {
+    console.error('Error saving state to sessionStorage:', error);
   }
-  return total;
-}
+};
 
-export function calculateQuantity(cart) {
-  const quantities = {};
-  for (let item of cart) {
-    if (quantities[item.id]) {
-      quantities[item.id] += 1;
-    } else { 
-      quantities[item.id] = 1;
+export const loadStateFromSessionStorage = () => {
+  try {
+    const serializedState = sessionStorage.getItem('reduxState');
+    if (serializedState === null) {
+      return undefined; 
     }
+    return JSON.parse(serializedState);
+  } catch (error) {
+    console.error('Error loading state from sessionStorage:', error);
+    return undefined; 
   }
-
-  const cartWithQuantity = cart.map(item => ({
-    ...item,
-    quantity: quantities[item.id] 
-  }));
-  
-  return cartWithQuantity;
-}
+};

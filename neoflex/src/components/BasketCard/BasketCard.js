@@ -1,12 +1,20 @@
 import { useDispatch } from 'react-redux';
 import './BasketCard.css';
-import { removeFromBasket } from '../redux/actions/actions';
+import { decreaseItemQuantity, increaseItemQuantity, removeFromBasket } from '../redux/actions/actions';
 
 function BasketCard({card}) {
   const dispatch = useDispatch();
 
   const onDelete = (card) => {
     dispatch(removeFromBasket(card));
+  }
+
+  const handleDecrease = (card) => {
+    dispatch(decreaseItemQuantity(card));
+  }
+
+  const handleIncrease = (card) => {
+    dispatch(increaseItemQuantity(card));
   }
 
   return (
@@ -16,9 +24,9 @@ function BasketCard({card}) {
           <img src={card.img} alt='item' className='basket-card__image'/>
         </div>
         <div className='basket-card__counter'>
-          <button className='basket-card__minus link'>-</button>
-          <p className='basket-card__counter-count'>1</p>
-          <button className='basket-card__plus link'>+</button>
+          <button onClick={() => handleDecrease(card)} disabled={(card.quantity === 1) && true} className='basket-card__minus link'>-</button>
+          <p className='basket-card__counter-count'>{card.quantity}</p>
+          <button onClick={() => handleIncrease(card)} className='basket-card__plus link'>+</button>
         </div>
       </div>
       <div className='basket-card__center-column'>
@@ -27,7 +35,7 @@ function BasketCard({card}) {
       </div> 
       <div className='basket-card__right-column'>
         <button onClick={() => onDelete(card)} className='basket-card__delete-btn link'></button>
-        <p className='basket-card__total-price'>{card.priceNow} ₽</p>
+        <p className='basket-card__total-price'>{card.priceNow * card.quantity} ₽</p>
       </div>     
     </section>
   )
